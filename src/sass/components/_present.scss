@@ -1,0 +1,112 @@
+.present {
+    @include position(absolute, 50%, 50%);
+    @include flexbox();
+    @extend %max-size;
+    padding: 0 2rem 3rem;
+    background-color: $color-white;
+    text-align: center;
+    box-shadow: $box-shadow;
+    transform: translate(-400%, -50%);
+    transition: all 1.5s cubic-bezier(.35,.16,.45,1.16);
+    overflow-y: auto;
+    
+    &--show {
+        transform: translate(-50%, -50%);
+    }
+
+    &__close {
+        @extend %btn;
+
+        &:hover {
+            cursor: pointer;
+            transform: skewX(-10deg);
+        }
+
+        &-background {
+            @extend %btn-background;
+            box-shadow: $box-shadow;
+
+            &:active {
+                box-shadow: none;
+            }
+
+            &--animation {
+                animation: $btn-animation;
+            }
+        }
+
+        &-container {
+            @extend %btn-container;
+            margin-top: 3rem;
+            align-self: center;
+        }
+    }
+
+    &-gallery {
+        width: 100%;
+
+        &__image {
+            width: 86%;
+
+            &-container {
+                width: 100%;
+                @include flexbox(row);
+            }
+        }
+
+        &__arrow {
+            width: 7%;
+            border: none;
+            background: none;
+            outline: none;
+
+            @include mq(sm) {
+                width: 5%;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            & > img {
+                width: 100%;
+            }
+        }
+
+        &__thumbnails {
+            display: none;
+
+            @include mq(sm) {
+                width: 100%;
+                @include flexbox(row);
+            }
+        }
+
+        &__thumbnail {
+            border: 0;
+            border-bottom: $border--black;
+            border-top: $border--black;
+            background: none;
+            outline: none;
+
+            &:not(:first-child) {
+                margin-left: -1px;
+                border-left: $border--black;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &-image {
+                width: 100%;
+            }
+        }
+    }
+
+    &__text {
+        font-size: $fontsize--text;
+        margin-top: 2rem;
+        padding: 0 2rem;
+    }
+}

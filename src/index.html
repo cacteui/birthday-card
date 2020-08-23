@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurra! Det er din fødselsdag!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+
+        <!-- FRONTPAGE -->
+        <article class="frontpage">
+            <div class="frontpage__column">
+                <p class="frontpage__text">Åbn dit fødselsdagskort</p>
+            </div>
+            <div class="frontpage__column">
+                <button class="frontpage__btn" type="button">
+                    <img src="../img/envelope.png" alt="Åbn fødselsdagskort" class="frontpage__btn-image frontpage__btn-image--animation">
+                </button>
+            </div>
+        </article>
+
+
+        <!-- LETTER -->
+        <article class="letter">
+            <div class="letter__container">
+
+                <!-- Heading -->
+                <h1 class="letter__heading">Kære fødselsdagsperson</h1>
+                
+                <!-- Text -->
+                <p class="letter__paragraph">Mange gange tillykke med fødselsdagen. Vi håber, du får en herlig dag, og vi er glade for at kunne være med til at fejre dig!</p>
+                <p class="letter__paragraph">Hele dette stunt er til, fordi din gave ikke er kommet endnu. Der var totalt udsolgt og de bliver først sendt af sted i uge 36.</p>
+                <p class="letter__paragraph">Det betyder altså at du må vente lidt, men indtil da kan du jo bare klikke på knappen nedenfor og se, hvad vi har i sinde at give dig!</p>
+                <p class="letter__ending">
+                    <span class="letter__ending-span">Mange hilsner fra</span>
+                    <span class="letter__ending-span">Luke & Leia</span>
+                    <span class="letter__ending-span">Rocket & Groot</span>
+                </p>
+
+                <!-- Button -->
+                <div class="letter__btn-container">
+                    <div class="letter__btn-background">
+                        <button class="letter__btn" type="button">Åbn din gave</button>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+        
+
+        <!-- PRESENT -->
+        <article class="present">
+
+            <!-- Gallery -->
+            <div class="present-gallery">
+                <div class="present-gallery__image-container">
+                    <button class="present-gallery__arrow present-gallery__arrow--previous"><img src="../img/arrow_left.png" alt="Sidste billede" class="arrow_icon_left"></button>
+                    <img src="../img/vaegholder_1.jpg" alt="Zone Ume Vægholder" class="present-gallery__image" data-id="1">
+                    <button class="present-gallery__arrow present-gallery__arrow--next"><img src="../img/arrow_right.png" alt="Næste billede" class="arrow_icon_right"></button>
+                </div>
+
+                <div class="present-gallery__thumbnails">
+                    <button class="present-gallery__thumbnail" data-id="1">
+                        <img src="../img/vaegholder_1.jpg" alt="Zone Ume Vægholder" data-id="1" class="present-gallery__thumbnail-image">
+                    </button>
+
+                    <button class="present-gallery__thumbnail" data-id="2">
+                        <img src="../img/vaegholder_2.jpg" alt="Zone Ume Vægholder" class="present-gallery__thumbnail-image">
+                    </button>
+
+                    <button class="present-gallery__thumbnail" data-id="3">
+                        <img src="../img/vaegholder_3.jpg" alt="Zone Ume Vægholder" data-id="3" class="present-gallery__thumbnail-image">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Text -->
+            <p class="present__text">4 stk. Zone Ume Vægholdere i sort</p>
+
+            <!-- Button -->
+            <div class="present__close-container">
+                <div class="present__close-background">
+                    <button class="present__close">Tilbage til kort &rarr;</button>
+                </div>
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>

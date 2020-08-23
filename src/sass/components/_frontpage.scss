@@ -1,0 +1,52 @@
+.frontpage {
+    @include position(absolute, 50%, 50%);
+    @include flexbox();
+    width: 100%;
+    height: 20rem;
+    transform: translate(-50%, -50%);
+    transition: all 1s linear;
+
+    &--hide {
+        transform: translate(-50%, 100vh);
+    }
+
+    &__column {
+        width: 100%;
+        @include flexbox();
+        padding: 1rem;
+    }
+
+    &__text {
+        font-size: 1.9rem;
+        font-family: 'Kaushan Script', cursive;
+        text-align: center;
+        letter-spacing: 0.3rem;
+        
+        &--animated {
+            display: inline-block;
+            animation: movingLetters 6s linear infinite;
+        }
+    }
+
+    &__btn {
+        width: 7rem;
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: none;
+        outline: none;
+        
+        &:hover {
+            cursor: pointer;
+        }
+        
+        &-image {
+            width: 100%;
+            transition: all .5s;
+        }
+        
+        &:hover #{&}-image {
+            background-color: $color-gold;
+        }
+    }
+}

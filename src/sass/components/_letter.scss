@@ -1,0 +1,77 @@
+.letter {
+    @include position(absolute, 50%, 50%);
+    @extend %max-size;
+    background-color: $color-white;
+    text-align: center;
+    box-shadow: $box-shadow;
+    transform: translate(-50%, -200vh);
+    transition: all 1.5s cubic-bezier(.25,-0.21,.18,.93);
+    overflow-y: auto;
+    
+    &--show {
+        transform: translate(-50%, -50%);
+    }
+    
+    &--hide {
+        transform: translate(200vh, -50%);
+    }
+    
+    &__container {
+        @include flexbox();
+        padding: 3rem 2rem;
+        overflow-y: auto;
+    }
+
+    &__heading {
+        margin-bottom: 1.5rem;
+    }
+    
+    &__paragraph {
+        font-size: $fontsize--text;
+        margin-bottom: 1.5rem;
+    }
+    
+    &__ending {
+        margin-top: 2rem;
+        @include flexbox();
+
+        &-span {
+            &:first-child {
+                font-family: 'Kaushan Script', cursive;
+                font-size: 2rem;
+            }
+
+            &:not(:first-child) {
+                margin-top: 1.2rem;
+                font-size: $fontsize--text;
+            }
+        }
+    }
+    
+    &__btn {
+        @extend %btn;
+        
+        &:hover {
+            cursor: pointer;
+            transform: skewX(-10deg);
+        }
+
+        &-background {
+            @extend %btn-background;
+            box-shadow: $box-shadow;
+
+            &:active {
+                box-shadow: none;
+            }
+
+            &--animation {
+                animation: $btn-animation;
+            }
+        }
+
+        &-container {
+            @extend %btn-container;
+            margin-top: 4rem;
+        }
+    }
+}

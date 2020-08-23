@@ -1,0 +1,24 @@
+/*
+350px -->: sm
+*/
+
+@mixin mq($breakpoint) {
+    @if $breakpoint == sm {
+        @media (min-width: 21.875em) { @content }; // 350px
+    }
+}
+
+@mixin position($position, $top: null, $left: null, $bottom: null, $right: null) {
+    position: $position;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}
+
+@mixin flexbox($direction: column, $wrap: nowrap, $justify-content: center, $align-items: center) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}

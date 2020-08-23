@@ -1,0 +1,36 @@
+@keyframes wiggle {
+    
+    0%, 39%, 61%, 100% {
+        transform: rotate(0deg);
+    }
+    
+    40%, 60% {
+        transform: rotate(-3deg);
+    }
+
+    43%, 57% {
+        transform: rotate(3deg);
+    }
+
+    46%, 50%, 54% {
+        transform: rotate(-4deg);
+    }
+
+    48%, 52% {
+        transform: rotate(4deg);
+    }
+}
+
+@keyframes movingLetters {
+    0% {
+        transform: scale(1) rotate(0);
+    }
+
+    5% {
+       transform: scale(1.4) rotate(-7deg);
+    }
+
+    8% {
+        transform: scale(1) rotate(0);
+    }
+}
